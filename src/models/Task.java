@@ -58,11 +58,11 @@ public class Task {
         this.created_at = created_at;
     }
 
-    public Timestamp getUpdate_at() {
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdate_at(Timestamp update_at) {
+    public void setUpdated_at(Timestamp update_at) {
         this.updated_at = update_at;
     }
 }
