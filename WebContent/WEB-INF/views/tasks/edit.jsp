@@ -3,7 +3,7 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
         <c:choose>
-            <c:when>
+            <c:when test="${task!=null}">
                 <h2>id : ${task.id} のタスク編集ページ</h2>
 
                 <form method="POST" action="<c:url value='/update'/>">
