@@ -36,6 +36,7 @@ public class UpdateServlet extends HttpServlet {
 
             em.getTransaction().begin();
             em.getTransaction().commit();
+            request.getSession().setAttribute("flush", "id : "+(String)(request.getSession().getAttribute("task_id"))+"の更新が完了しました。");
             em.close();
 
             request.getSession().removeAttribute("task_id");

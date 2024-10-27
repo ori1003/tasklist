@@ -38,6 +38,7 @@ public class CreateServlet extends HttpServlet {
 
             em.persist(t);
             em.getTransaction().commit();
+            request.getSession().setAttribute("flush", "id : "+String.valueOf(t.getId())+"の登録が完了しました。");
             em.close();
 
             response.sendRedirect(request.getContextPath()+"/index");
